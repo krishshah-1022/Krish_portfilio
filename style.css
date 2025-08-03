@@ -1,0 +1,222 @@
+:root {
+  --bg: #0e0e0e;
+  --bg-alt: #1c1f26;
+  --fg: #ffffff;
+  --accent: #1976d2;
+  --gray: #aaaaaa;
+  --card-bg: #2a2d35;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--bg);
+  color: var(--fg);
+  line-height: 1.6;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: var(--card-bg);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+header h1 {
+  font-size: 1.5rem;
+}
+
+nav a {
+  color: var(--fg);
+  margin: 0 1rem;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+  background: var(--bg-alt);
+}
+
+.hero img {
+  max-width: 400px;
+  border-radius: 8px;
+  margin-right: 3rem;
+}
+
+.hero-content {
+  max-width: 500px;
+}
+
+.hero-content h2 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.hero-content p {
+  margin: 1rem 0;
+  color: var(--gray);
+}
+
+.hero-content .buttons a {
+  margin-right: 1rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-block;
+}
+
+.explore-btn {
+  background: var(--accent);
+  color: white;
+}
+
+.video-btn {
+  border: 2px solid white;
+  color: white;
+  transition: border 0.3s ease, color 0.3s ease;
+}
+
+section {
+  padding: 3rem 2rem;
+}
+
+section.alt {
+  background: var(--bg-alt);
+}
+
+h3 {
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+  color: var(--accent);
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.project-card {
+  background: var(--card-bg);
+  border-radius: 8px;
+  padding: 1rem;
+  border-left: 4px solid var(--accent);
+  transition: transform 0.2s;
+  cursor: pointer;
+}
+
+.project-card:hover {
+  transform: scale(1.02);
+}
+
+.project-card h4 {
+  margin-bottom: 0.5rem;
+  color: white;
+}
+
+.project-card p {
+  color: var(--gray);
+  font-size: 0.9rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 500px;
+}
+
+input, textarea {
+  padding: 0.75rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  background: #111;
+  color: white;
+  border: 1px solid #444;
+  transition: background 0.3s ease, color 0.3s ease, border 0.3s ease;
+}
+
+/* Light mode input/textarea styling */
+body.light-mode input,
+body.light-mode textarea {
+  background: #f0f0f0;
+  color: #111;
+  border: 1px solid #ccc;
+}
+
+button[type="submit"] {
+  background: var(--accent);
+  color: white;
+  padding: 0.75rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+footer {
+  background: #121212;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  color: var(--gray);
+}
+
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+  }
+
+  .hero img {
+    margin: 0 0 2rem 0;
+  }
+.project-card a {
+  text-decoration: none !important;
+  color: inherit;
+}
+
+.project-card a:hover,
+.project-card a:focus,
+.project-card a:active,
+.project-card a:visited {
+  text-decoration: none !important;
+  color: inherit;
+}
+.learn-more-btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
+  background-color: #2c7a7b;   /* Green-blue shade like the screenshot */
+  color: white;                /* White text */
+  font-weight: 600;
+  border: none;
+  border-radius: 4px;
+  text-decoration: none;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  transition: background-color 0.3s ease;
+}
+
+.learn-more-btn:hover {
+  background-color: #276a6b;
+}
+}
